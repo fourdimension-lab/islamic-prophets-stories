@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stories of the Prophets in Islam (Qasas al-Anbiya) | stories.sakib.bond</title>
+  <meta name="description" content="Discover inspiring stories of all 25 Prophets mentioned in the Quran, noble Companions, and revered women in Islam on stories.sakib.bond." />
+  <meta name="keywords" content="Stories of Prophets, Qasas al-Anbiya, Prophet Adam, Prophet Musa, Prophet Ibrahim, Prophet Muhammad, Sahabah stories, stories.sakib.bond" />
+  <meta name="author" content="stories.sakib.bond" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1a1a4e" />
+  <link rel="canonical" href="https://stories.sakib.bond/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stories of the Prophets in Islam — stories.sakib.bond" />
+  <meta property="og:description" content="Chronological stories, lessons, and miracles of the 25 Prophets mentioned in the Holy Quran." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stories.sakib.bond/" />
+  <meta property="og:site_name" content="Stories of the Prophets" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stories of the Prophets — stories.sakib.bond" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Stories of the Prophets in Islam",
+    "url": "https://stories.sakib.bond",
+    "description": "Chronicles of the 25 Prophets of Islam, noble companions, and moral life lessons."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-base: #0a0a29;
+      --bg-surface: #141442;
+      --bg-card: #1f1f5c;
+      --bg-card-hover: #292978;
+      --indigo-accent: #6366f1;
+      --gold-primary: #ffd700;
+      --gold-bright: #ffea75;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-arabic: #fef08a;
+      --border-color: rgba(255, 215, 0, 0.25);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 10px 30px -8px rgba(0, 0, 0, 0.7);
+    }
+
+    [data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #e0e7ff;
+      --bg-card-hover: #c7d2fe;
+      --indigo-accent: #4338ca;
+      --gold-primary: #b45309;
+      --gold-bright: #d97706;
+      --text-main: #1e1b4b;
+      --text-muted: #475569;
+      --text-arabic: #312e81;
+      --border-color: rgba(180, 83, 9, 0.2);
+      --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bg-pattern {
+      position: fixed; inset: 0;
+      background-image: radial-gradient(rgba(255, 215, 0, 0.06) 1px, transparent 1px);
+      background-size: 28px 28px; pointer-events: none; z-index: 0;
+    }
+
+    /* Halalspark Ad */
+    .halalspark-ad-container {
+      width: 100%; display: flex; justify-content: center; margin: 18px 0; position: relative; z-index: 10;
+    }
+    .halalspark-ad {
+      border: 1px dashed var(--gold-primary); border-radius: var(--radius-sm);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(20, 20, 66, 0.95), rgba(10, 10, 41, 0.95));
+      color: var(--gold-bright); font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3); padding: 10px; text-align: center;
+    }
+    .halalspark-ad .ad-badge {
+      font-size: 10px; text-transform: uppercase; padding: 2px 8px;
+      background: rgba(255, 215, 0, 0.15); border-radius: 4px; margin-bottom: 4px; color: var(--text-muted);
+    }
+
+    /* Header */
+    header {
+      background: var(--bg-surface); border-bottom: 1px solid var(--border-color);
+      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px);
+    }
+    .navbar {
+      max-width: 1400px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px; text-decoration: none;
+      color: var(--gold-bright); font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700;
+    }
+    .brand i { font-size: 24px; color: var(--gold-primary); }
+    .brand span { font-size: 12px; display: block; color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .theme-btn {
+      background: var(--bg-card); border: 1px solid var(--border-color);
+      color: var(--gold-bright); width: 38px; height: 38px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.2s;
+    }
+    .theme-btn:hover { background: var(--bg-card-hover); border-color: var(--gold-bright); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-base) 100%);
+      border-bottom: 1px solid var(--border-color);
+      padding: 44px 24px 34px; text-align: center; position: relative; z-index: 5;
+    }
+    .hero-arabic {
+      font-family: 'Amiri', serif; font-size: 28px; color: var(--gold-bright);
+      margin-bottom: 8px; direction: rtl;
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px);
+      color: var(--gold-bright); margin-bottom: 8px;
+    }
+    .hero p {
+      font-size: 15px; color: var(--text-muted); max-width: 680px; margin: 0 auto 20px;
+    }
+
+    /* Controls */
+    .controls-wrap {
+      max-width: 1400px; margin: 28px auto 0; padding: 0 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+      position: relative; z-index: 5;
+    }
+    .search-input {
+      background: var(--bg-surface); border: 1px solid var(--border-color);
+      border-radius: 20px; padding: 10px 20px; color: var(--text-main); font-size: 14px;
+      outline: none; width: 280px;
+    }
+    .search-input:focus { border-color: var(--gold-primary); }
+
+    .category-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pill {
+      background: var(--bg-surface); border: 1px solid var(--border-color);
+      color: var(--text-muted); padding: 8px 16px; border-radius: 20px; font-size: 12px;
+      cursor: pointer; transition: 0.2s;
+    }
+    .pill:hover, .pill.active {
+      background: var(--gold-primary); color: #000; border-color: var(--gold-primary); font-weight: 700;
+    }
+
+    /* Stories Grid */
+    .stories-grid {
+      max-width: 1400px; margin: 24px auto 40px; padding: 0 24px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px;
+      position: relative; z-index: 5;
+    }
+    .story-card {
+      background: var(--bg-surface); border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+    .story-card:hover { transform: translateY(-4px); border-color: var(--gold-bright); }
+    .story-card-top {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;
+    }
+    .story-order-badge {
+      background: rgba(255, 215, 0, 0.15); color: var(--gold-bright);
+      font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px;
+    }
+    .story-name-en {
+      font-family: 'Cinzel', serif; font-size: 20px; color: var(--gold-bright); margin-bottom: 2px;
+    }
+    .story-name-ar {
+      font-family: 'Amiri', serif; font-size: 26px; color: var(--text-arabic);
+      direction: rtl; text-align: right; margin-bottom: 10px;
+    }
+    .story-snippet {
+      font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6;
+    }
+    .story-meta-row {
+      display: flex; justify-content: space-between; border-top: 1px solid var(--border-color);
+      padding-top: 10px; font-size: 12px; color: var(--text-muted); margin-bottom: 12px;
+    }
+    .btn-read-story {
+      background: var(--bg-card); border: 1px solid var(--gold-primary);
+      color: var(--gold-bright); padding: 10px; border-radius: var(--radius-sm);
+      font-weight: 600; cursor: pointer; text-align: center; transition: 0.2s;
+    }
+    .btn-read-story:hover { background: var(--gold-primary); color: #000; }
+
+    /* Footer */
+    footer {
+      background: var(--bg-surface); border-top: 1px solid var(--border-color);
+      padding: 40px 24px 24px; margin-top: auto; text-align: center; position: relative; z-index: 10;
+    }
+    .footer-links {
+      display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; font-size: 13px;
+    }
+    .footer-links a { color: var(--text-muted); text-decoration: none; cursor: pointer; }
+    .footer-links a:hover { color: var(--gold-bright); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+
+    /* Modals */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center;
+      z-index: 1000; padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: var(--bg-surface); border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-lg); width: 100%; max-width: 650px; max-height: 85vh;
+      overflow-y: auto; padding: 28px; position: relative; color: var(--text-main);
+    }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; background: transparent;
+      border: none; color: var(--gold-bright); font-size: 18px; cursor: pointer;
+    }
+    .modal-box h3 {
+      font-family: 'Cinzel', serif; color: var(--gold-bright); font-size: 22px;
+      margin-bottom: 6px;
+    }
+    .modal-subtitle { color: var(--indigo-accent); font-weight: 600; font-size: 13px; margin-bottom: 14px; }
+    .modal-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.8; }
+    .lesson-box {
+      background: var(--bg-card); border-left: 3px solid var(--gold-primary);
+      padding: 12px 16px; border-radius: 4px; margin-top: 14px; font-size: 13px; color: var(--text-main);
+    }
+    .contact-input {
+      width: 100%; background: var(--bg-card); border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm); padding: 10px 14px; color: var(--text-main);
+      margin-bottom: 12px; outline: none;
+    }
+    .contact-input:focus { border-color: var(--gold-primary); }
+    .btn-submit {
+      background: var(--gold-primary); color: #000; font-weight: 700;
+      padding: 10px 20px; border-radius: var(--radius-sm); border: none; cursor: pointer;
+    }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 600px;
+      margin: 0 auto; background: var(--bg-surface); border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-md); padding: 16px 20px; display: flex;
+      align-items: center; justify-content: space-between; gap: 16px; z-index: 999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .cookie-banner p { font-size: 13px; color: var(--text-muted); margin: 0; }
+    .cookie-btn {
+      background: var(--gold-primary); color: #000; font-weight: 700;
+      font-size: 12px; padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .stories-grid { grid-template-columns: 1fr; }
+      .controls-wrap { flex-direction: column; align-items: stretch; }
+      .search-input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <a href="/" class="brand">
+        <i class="fas fa-scroll"></i>
+        <div>
+          Islamic Stories
+          <span>stories.sakib.bond</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button class="theme-btn" onclick="toggleTheme()" title="Toggle Theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HALALSPARK AD: Header Banner 728x90 -->
+  <div class="halalspark-ad-container">
+    <div class="halalspark-ad" data-ad-slot="header-banner" style="width:728px;max-width:96%;height:90px;">
+      <span class="ad-badge">Halalspark Ad Network</span>
+      <div><i class="fas fa-book-open" style="margin-right:6px;"></i> Illustrated Islamic Children's Books & Prophetic Stories — stories.sakib.bond</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-arabic">نَحْنُ نَقُصُّ عَلَيْكَ أَحْسَنَ الْقَصَصِ</div>
+    <h1>Stories of the Prophets & Companions</h1>
+    <p>"There was certainly in their stories a lesson for those of understanding..." — Surah Yusuf (12:111)</p>
+  </section>
+
+  <!-- Controls -->
+  <section class="controls-wrap">
+    <div class="category-pills">
+      <button class="pill active" onclick="setCategory('all', this)">All Stories</button>
+      <button class="pill" onclick="setCategory('Prophet', this)">The 25 Prophets</button>
+      <button class="pill" onclick="setCategory('Sahabah', this)">Noble Companions</button>
+      <button class="pill" onclick="setCategory('Women', this)">Revered Women</button>
+    </div>
+    <input type="text" class="search-input" id="storySearch" placeholder="Search prophet or companion..." onkeyup="filterStories()">
+  </section>
+
+  <!-- Stories Grid -->
+  <main class="stories-grid" id="storiesGrid">
+    <!-- Populated by JavaScript -->
+  </main>
+
+  <!-- HALALSPARK AD: In-Content 336x280 -->
+  <div class="halalspark-ad-container">
+    <div class="halalspark-ad" data-ad-slot="in-content" style="width:336px;max-width:96%;height:220px;">
+      <span class="ad-badge">Halalspark Ad Network</span>
+      <div><i class="fas fa-shield-halved" style="font-size:24px;margin-bottom:8px;display:block;"></i> Educational Animation Series on Islamic History for Muslim Youth</div>
+    </div>
+  </div>
+
+  <!-- HALALSPARK AD: Footer Banner 728x90 -->
+  <div class="halalspark-ad-container">
+    <div class="halalspark-ad" data-ad-slot="footer-banner" style="width:728px;max-width:96%;height:90px;">
+      <span class="ad-badge">Halalspark Ad</span>
+      <div>Travel to Historic Islamic Lands: Turkey, Jordan, Uzbekistan Heritage Expeditions</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a onclick="openModal('privacyModal')">Privacy Policy</a>
+      <a onclick="openModal('termsModal')">Terms of Service</a>
+      <a onclick="openModal('aboutModal')">About Us</a>
+      <a onclick="openModal('contactModal')">Contact Us</a>
+      <a onclick="openModal('disclaimerModal')">Historical Sources</a>
+    </div>
+    <div class="footer-copy">
+      Copyright © 2026 <a href="https://stories.sakib.bond" style="color:var(--gold-bright);text-decoration:none;">stories.sakib.bond</a> — All Rights Reserved. Compliant with Halalspark Ad Guidelines.
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="storyDetailModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('storyDetailModal')"><i class="fas fa-times"></i></button>
+      <h3 id="modalStoryTitle">Prophet Story</h3>
+      <div class="modal-subtitle" id="modalStorySubtitle"></div>
+      <div id="modalStoryContent"></div>
+      <div class="lesson-box" id="modalStoryLesson"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('privacyModal')"><i class="fas fa-times"></i></button>
+      <h3>Privacy Policy</h3>
+      <p>Welcome to <strong>stories.sakib.bond</strong>. We respect your reading privacy.</p>
+      <p><strong>Halalspark Advertising:</strong> We incorporate Halalspark for family-friendly, ethical ads. Cookies serve solely for non-intrusive ad placement.</p>
+      <p>Contact: admin@stories.sakib.bond</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('termsModal')"><i class="fas fa-times"></i></button>
+      <h3>Terms of Service</h3>
+      <p>The narrations on <strong>stories.sakib.bond</strong> are derived from authentic Quranic exegesis and verified Hadith sources for religious and educational enlightenment.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="aboutModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('aboutModal')"><i class="fas fa-times"></i></button>
+      <h3>About Islamic Stories</h3>
+      <p>Our platform chronicles the profound trials, unwavering faith, and moral triumphs of the 25 Prophets mentioned in the Quran and the early Muslim community.</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('contactModal')"><i class="fas fa-times"></i></button>
+      <h3>Contact Us</h3>
+      <form onsubmit="event.preventDefault(); alert('Message sent! JazakAllahu Khair.'); closeModal('contactModal');">
+        <input type="text" class="contact-input" placeholder="Your Name" required>
+        <input type="email" class="contact-input" placeholder="Your Email" required>
+        <textarea class="contact-input" rows="4" placeholder="Your Feedback or Question..." required></textarea>
+        <button type="submit" class="btn-submit">Submit Message</button>
+      </form>
+      <p style="margin-top:10px;font-size:12px;">Email: admin@stories.sakib.bond</p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="disclaimerModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('disclaimerModal')"><i class="fas fa-times"></i></button>
+      <h3>Historical Sources Disclaimer</h3>
+      <p>All stories adhere strictly to Quranic revelation and sound (Sahih/Hasan) Prophetic Hadith, discarding unverified folklore (Isra'iliyyat) to preserve doctrinal clarity.</p>
+    </div>
+  </div>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p><i class="fas fa-cookie-bite" style="color:var(--gold-bright);margin-right:6px;"></i> We use cookies to enhance your reading experience and deliver Halalspark advertisements.</p>
+    <button class="cookie-btn" onclick="acceptCookies()">Accept & Continue</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const stories = [
+      {
+        id: 1,
+        nameEn: "Prophet Adam (AS)",
+        nameAr: "آدَم",
+        type: "Prophet",
+        order: "Prophet #1",
+        quranRef: "Mentioned 25 times",
+        snippet: "The first human being created by Allah from clay, breathed with spirit, and taught the names of all things.",
+        fullStory: "<p>Allah created Adam (AS) from earth, demonstrating the divine honor bestowed upon humanity. The angels were commanded to prostrate to Adam in veneration of Allah's wisdom, but Iblis refused out of pride and arrogance.</p><p>Adam and Hawwa (Eve) lived in Paradise until tempted by Satan. Upon their error, they immediately turned to Allah with sincere repentance: 'Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.' (7:23). Allah accepted their repentance and designated earth as humanity's temporary testing abode.</p>",
+        lesson: "<strong>Key Moral:</strong> Sincere repentance (Tawbah) immediately restores human dignity with Allah. Arrogance and envy (the sin of Iblis) lead to ruin."
+      },
+      {
+        id: 2,
+        nameEn: "Prophet Nuh / Noah (AS)",
+        nameAr: "نُوح",
+        type: "Prophet",
+        order: "Prophet #3",
+        quranRef: "Mentioned 43 times",
+        snippet: "Preached monotheism tirelessly for 950 years with boundless patience before constructing the great Ark.",
+        fullStory: "<p>Prophet Nuh (AS) called his people night and day, publicly and privately, reminding them of Allah's blessings. Despite intense mockery, he persevered without despairing for over nine centuries.</p><p>When his people persisted in idol worship and transgression, Allah commanded Nuh to build the Ark on dry land. The great flood submerged the earth, saving only the faithful believers and pairs of creatures.</p>",
+        lesson: "<strong>Key Moral:</strong> Success is measured by steadfast obedience and sincerity, not the immediate majority consensus."
+      },
+      {
+        id: 3,
+        nameEn: "Prophet Ibrahim (AS)",
+        nameAr: "إِبْرَاهِيم",
+        type: "Prophet",
+        order: "Prophet #6",
+        quranRef: "Mentioned 69 times",
+        snippet: "The Friend of Allah (Khalilullah), patriarch of pure monotheism, who rebuilt the Holy Kaaba with his son Ismail.",
+        fullStory: "<p>Prophet Ibrahim (AS) confronted the idolatry of his society and Nimrod's tyranny through flawless logical reasoning. Cast into a roaring furnace, Allah commanded the fire: 'O fire, be coolness and safety upon Ibrahim!' (21:69).</p><p>Later, he was tested with the supreme trial of sacrificing his beloved son Ismail, exemplifying absolute submission to the Divine Will, which Allah substituted with a ram—commemorated worldwide during Eid ul-Adha.</p>",
+        lesson: "<strong>Key Moral:</strong> Complete trust in Allah (Tawakkul) neutralizes the fiercest fires of life's trials."
+      },
+      {
+        id: 4,
+        nameEn: "Prophet Yusuf / Joseph (AS)",
+        nameAr: "يُوسُف",
+        type: "Prophet",
+        order: "Prophet #11",
+        quranRef: "Mentioned 27 times",
+        snippet: "From the depths of a dark well and false imprisonment to becoming the chief minister of Egypt, epitomizing chastity and forgiveness.",
+        fullStory: "<p>Betrayed by his jealous brothers and cast into a dry well, sold into slavery in Egypt, and wrongly imprisoned for refusing sin, Yusuf (AS) remained pure and patient.</p><p>Allah elevated him to interpret Pharaoh's dreams, saving Egypt from catastrophic famine. When his brothers arrived in need, he forgave them unconditionally: 'No blame will there be upon you today. May Allah forgive you.' (12:92).</p>",
+        lesson: "<strong>Key Moral:</strong> Beautiful patience (Sabrun Jameel) and unyielding moral integrity always culminate in divine elevation."
+      },
+      {
+        id: 5,
+        nameEn: "Prophet Musa / Moses (AS)",
+        nameAr: "مُوسَى",
+        type: "Prophet",
+        order: "Prophet #14",
+        quranRef: "Mentioned 136 times",
+        snippet: "Kalimullah—who spoke directly to Allah, confronted Pharaoh's tyranny, and parted the Red Sea to deliver the Israelites.",
+        fullStory: "<p>Born during Pharaoh's decree to slaughter newborn boys, Musa's mother cast him into the Nile with supreme faith in Allah. Raised within Pharaoh's palace, he later fled to Madyan before receiving revelation at Mount Sinai.</p><p>Musa confronted Pharaoh with divine miracles: his staff becoming a serpent and his hand shining luminous white. When trapped before the Red Sea, he proclaimed: 'Indeed, with me is my Lord; He will guide me!' (26:62). The sea parted into great walls of water.</p>",
+        lesson: "<strong>Key Moral:</strong> No tyrant's army can prevail against the believer whose heart is anchored in certainty with Allah."
+      },
+      {
+        id: 6,
+        nameEn: "Prophet Isa / Jesus (AS)",
+        nameAr: "عِيسَى",
+        type: "Prophet",
+        order: "Prophet #24",
+        quranRef: "Mentioned 25 times",
+        snippet: "The Messiah born miraculously of the Virgin Maryam (AS), who spoke in the cradle and healed the sick by Allah's leave.",
+        fullStory: "<p>Prophet Isa (AS) was created by the word of Allah ('Be', and it is), born to the righteous Maryam without a human father. As an infant in the cradle, he defended his mother's purity: 'Indeed, I am the servant of Allah. He has given me the Scripture and made me a prophet.' (19:30).</p><p>Allah granted him miracles: reviving the dead, healing the blind and leper by Allah's permission. The Quran confirms he was not crucified or killed, but raised bodily to the heavens by Allah.</p>",
+        lesson: "<strong>Key Moral:</strong> Prophet Isa is a revered prophet of monotheism and mercy, embodying spiritual humility."
+      },
+      {
+        id: 7,
+        nameEn: "Prophet Muhammad ﷺ",
+        nameAr: "مُحَمَّد",
+        type: "Prophet",
+        order: "Prophet #25",
+        quranRef: "The Seal of Prophets",
+        snippet: "Sent as a universal mercy to all creation (Rahmatan lil-'Alamin), the final messenger through whom the Holy Quran was revealed.",
+        fullStory: "<p>Born an orphan in Makkah, renowned even before prophethood as Al-Amin (The Trustworthy). At age 40, Angel Jibril appeared in the Cave of Hira with the first revelation: 'Iqra!' (Read!).</p><p>He endured 23 years of tireless striving, persecution, and the migration to Madinah, establishing a society of brotherhood, racial equality, and divine justice. At the Conquest of Makkah, he pardoned his former persecutors, transforming human history forever.</p>",
+        lesson: "<strong>Key Moral:</strong> Supreme character, mercy to enemies, and unwavering devotion to truth are the hallmark of the Prophet's sunnah."
+      },
+      {
+        id: 8,
+        nameEn: "Maryam bint Imran (AS)",
+        nameAr: "مَرْيَم",
+        type: "Women",
+        order: "Revered Woman",
+        quranRef: "Title of Surah 19",
+        snippet: "The only woman named directly in the Quran, chosen and purified above all the women of the worlds for her unmatched piety.",
+        fullStory: "<p>Dedicated to the service of the temple from before birth by her mother, Maryam (AS) was cared for by Prophet Zakariya. Whenever he entered her sanctuary, he found fresh fruits provided miraculously by Allah.</p><p>She endured the solitary trial of miraculous conception with steadfast devotion and silence, earning the title of the greatest woman in creation alongside Khadijah, Fatimah, and Asiyah.</p>",
+        lesson: "<strong>Key Moral:</strong> Spiritual devotion and trust in Allah during solitary hardship shield the soul from worldly slander."
+      },
+      {
+        id: 9,
+        nameEn: "Abu Bakr As-Siddiq (RA)",
+        nameAr: "أَبُو بَكْر",
+        type: "Sahabah",
+        order: "1st Caliph",
+        quranRef: "The Second of Two in the Cave",
+        snippet: "The closest companion to the Prophet ﷺ, the first adult male to accept Islam, known for unquestioning loyalty and generosity.",
+        fullStory: "<p>When the Prophet ﷺ spoke of the Isra and Mi'raj night journey, Abu Bakr declared without hesitation: 'If he said it, it is the truth!' earning the title As-Siddiq (The Truthful).</p><p>During the Tabuk expedition, he donated his entire fortune for the cause of Allah. When the Prophet ﷺ passed away, Abu Bakr stood firm: 'Whoever worshipped Muhammad, Muhammad has died; but whoever worships Allah, Allah is alive and never dies.'</p>",
+        lesson: "<strong>Key Moral:</strong> Unshakeable faith in times of collective crisis anchors the entire community."
+      }
+    ];
+
+    let currentCategory = 'all';
+
+    function renderStories(list = stories) {
+      const container = document.getElementById('storiesGrid');
+      container.innerHTML = list.map(s => `
+        <div class="story-card">
+          <div>
+            <div class="story-card-top">
+              <span class="story-order-badge">${s.order}</span>
+              <span style="font-size:12px;color:var(--indigo-accent);"><i class="fas fa-tag" style="margin-right:4px;"></i>${s.type}</span>
+            </div>
+            <div class="story-name-en">${s.nameEn}</div>
+            <div class="story-name-ar">${s.nameAr}</div>
+            <div class="story-snippet">${s.snippet}</div>
+          </div>
+          <div>
+            <div class="story-meta-row">
+              <span><i class="fas fa-book-quran" style="margin-right:4px;"></i>${s.quranRef}</span>
+            </div>
+            <button class="btn-read-story" style="width:100%;" onclick="openStoryModal(${s.id})"><i class="fas fa-book-reader" style="margin-right:6px;"></i> Read Full Story & Moral</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterStories() {
+      const q = document.getElementById('storySearch').value.toLowerCase().trim();
+      const filtered = stories.filter(s => {
+        const matchesQ = !q || s.nameEn.toLowerCase().includes(q) || s.nameAr.includes(q) || s.snippet.toLowerCase().includes(q);
+        const matchesC = currentCategory === 'all' || s.type === currentCategory;
+        return matchesQ && matchesC;
+      });
+      renderStories(filtered);
+    }
+
+    function setCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterStories();
+    }
+
+    function openStoryModal(id) {
+      const s = stories.find(item => item.id === id);
+      if (!s) return;
+      document.getElementById('modalStoryTitle').innerText = `${s.nameEn} (${s.nameAr})`;
+      document.getElementById('modalStorySubtitle').innerText = `${s.order} • ${s.quranRef}`;
+      document.getElementById('modalStoryContent').innerHTML = s.fullStory;
+      document.getElementById('modalStoryLesson').innerHTML = s.lesson;
+      openModal('storyDetailModal');
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      document.getElementById('themeIcon').className = next === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+      localStorage.setItem('stories_theme', next);
+    }
+
+    function openModal(id) { document.getElementById(id).classList.add('active'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
+    function acceptCookies() {
+      localStorage.setItem('stories_cookies_accepted', 'true');
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('stories_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.getElementById('themeIcon').className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+
+      if (localStorage.getItem('stories_cookies_accepted') === 'true') {
+        document.getElementById('cookieBanner').style.display = 'none';
+      }
+
+      renderStories();
+    });
+  </script>
+</body>
+</html>
