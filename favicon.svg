@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141442"/>
+      <stop offset="100%" stop-color="#0a0a29"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Ancient Book / Chronicle -->
+  <path d="M 16 16 L 42 16 C 46 16 48 18 48 22 L 48 48 C 48 51 45 53 42 53 L 16 53 C 13 53 11 51 11 48 L 11 21 C 11 18 13 16 16 16 Z" fill="#1e1b4b" stroke="url(#gold)" stroke-width="2"/>
+  <!-- Spine Ribs -->
+  <line x1="16" y1="16" x2="16" y2="53" stroke="url(#gold)" stroke-width="3"/>
+  <line x1="11" y1="24" x2="16" y2="24" stroke="url(#gold)" stroke-width="1.5"/>
+  <line x1="11" y1="34" x2="16" y2="34" stroke="url(#gold)" stroke-width="1.5"/>
+  <line x1="11" y1="44" x2="16" y2="44" stroke="url(#gold)" stroke-width="1.5"/>
+  <!-- Golden Feather Quill writing on Book -->
+  <path d="M 50 10 C 46 15 40 23 35 32 L 32 42 L 38 38 C 44 31 49 22 54 13 C 55 11 53 9 50 10 Z" fill="url(#gold)"/>
+  <!-- Crescent on Book Cover -->
+  <path d="M 32 26 A 7 7 0 0 0 32 40 A 5.5 5.5 0 0 1 32 29 A 7 7 0 0 0 32 26 Z" fill="url(#gold)"/>
+</svg>
